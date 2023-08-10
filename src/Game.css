@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap');
+
+  :root {
+    --sidebar-blue: rgba(25, 146, 212, 1);
+    --background-grey: rgba(226,232,240,1);
+    --transition-time: 200ms;
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --black: #050505;
+    --red: #ff7070;
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
+    --tibia-bg-color: #474747;
+    --tibia-font-color: #ADADAD;
+    --tibia-bg-color-dark: #363636;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Jost', sans-serif;
+  }
+  
+  
+  .main-wrapper {
+    background-image: url('/public/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+  width: 20%;
+  height: auto;
+  aspect-ratio: 1/1;
+  border: 2px solid rgba(0,0,0,.4);
+  text-align: center;
+  color: var(--tibia-font-color);
+  font-size: 16px;
+  background-image: url('/login-background.png');
+}
