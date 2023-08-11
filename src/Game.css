@@ -19,9 +19,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
     font-family: 'Jost', sans-serif;
+    color: var(--tibia-font-color);
+    transition: all 300ms ease-in-out;
   }
   
   
@@ -38,12 +40,107 @@
 }
 
 .menu {
+  opacity: 0;
+  pointer-events: none;
   width: 20%;
   height: auto;
   aspect-ratio: 1/1;
   border: 2px solid rgba(0,0,0,.4);
   text-align: center;
-  color: var(--tibia-font-color);
   font-size: 16px;
   background-image: url('/login-background.png');
+  display: grid;
+  grid-template-rows: 20% 15% 2fr 1fr;
+  padding-bottom: 1rem;
+  transition: opacity 1500ms ease-in-out;
+}
+
+.menu > h1,
+.menu > h2,
+.select-difficulty > li {
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none;
+}
+
+.select-difficulty {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0px 10%;
+  align-items: center;
+}
+
+.select-difficulty > li {
+  width: 100%;
+  height: 50%;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/login-background.png');
+  border: 1px solid rgba(0,0,0,.3);
+  padding: 1% 2%;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: rgba(17, 17, 26, 0.3) 0px 1px 0px, rgba(17, 17, 26, 0.5) 0px 0px 8px;
+
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 8px;
+}
+
+.difficulty-btn.selected {
+  box-shadow: rgba(50, 50, 93, 0.3) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
+}
+.start-game-btn {
+  width: 50%;
+  height: 100%;
+  justify-self: center;  
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 22px;
+  background-image: url('/login-background.png');
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 8px;
+  outline: none;
+  border: none;
+}
+.start-game-btn:hover,
+.start-game-btn:focus {
+  outline: none;
+  border: none;
+}
+.start-game-btn:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.3) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
+
+}
+
+.board {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  background: url('/public/login-background.png');
+  border: 1px solid rgba(0,0,0,.3);
+  display: grid;
+  padding: 15% 30%;
+  grid-template-rows: repeat(autofill, 150px);
+  grid-template-columns: 1fr 1fr 1fr;  
+  overflow-y: visible;
+  transition: opacity 1500ms ease-in-out;
+
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+.show {
+  opacity: 1;
+  pointer-events: all;
 }
