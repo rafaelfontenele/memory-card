@@ -2,8 +2,12 @@ import { useState } from 'react'
 import './Game.css'
 import { Menu } from './Menu'
 import { Board } from './Board'
+import { ToggleIcon } from './ToggleIcon'
+
 
 function Game() {
+  const [music, setMusic] = useState(true);
+  const [sound, setSound] = useState(true);
   const [ state, setState ] = useState({
     difficulty: 'medium',
     gameStage: 0    
@@ -24,7 +28,8 @@ function Game() {
 
     </div>
 
-
+    <ToggleIcon url={`music-${music == true ? 'on' : 'off'}.svg`} onClickFunction={() => setMusic(prev => !prev)} bgColor={'red'} />
+    
     </>
   )
 }

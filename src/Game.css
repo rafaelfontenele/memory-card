@@ -28,7 +28,7 @@
   
   
   .main-wrapper {
-    background-image: url('/public/background1.jpg');
+    background-image: url('/background1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     min-width: 100vw;
@@ -37,6 +37,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.toggle-icon-wrapper {
+  background-image: url('/login-background.png');
+  position: absolute;
+  width: 50px;
+  border-radius: 50px;
+  bottom: 5%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggle-icon-wrapper > img {
+  aspect-ratio: 1/1;
+  padding: 25%;
 }
 
 .menu {
@@ -122,9 +138,9 @@
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  width: 50vw;
-  height: 50vh;
-  background: url('/public/login-background.png');
+  width: 70vw;
+  height: 70vh;
+  background: url('/login-background.png');
   border: 1px solid rgba(0,0,0,.3);
   display: grid;
   padding: 15% 30%;
