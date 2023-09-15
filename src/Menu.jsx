@@ -40,7 +40,7 @@ export const Menu = ( { state, setState } ) => {
             {['easy','medium','hard'].map(difficulty => {
                 const currentDifficulty = state['difficulty'];
                 return (
-                    <li key={difficulty} onClick={() => changeDifficulty(difficulty)} className={`difficulty-btn ${currentDifficulty == difficulty ? 'selected' : ''}`}>
+                    <li key={difficulty} onClick={() => changeDifficulty(difficulty)} className={`difficulty-btn ${currentDifficulty == difficulty ? 'selected' : ''} clickable`}>
                         {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}
                     </li>
                 )
@@ -51,7 +51,7 @@ export const Menu = ( { state, setState } ) => {
 
         </ol>        
 
-        <button className='start-game-btn' onClick={() => startGame()}>Start</button>
+        <button className='start-game-btn clickable' onClick={() => startGame()}>Start</button>
     </div>
     )
 }
